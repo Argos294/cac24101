@@ -1,0 +1,20 @@
+ /*selector de tipo*/
+   h1 {
+      color:red !important;
+	 }
+	 /*selector de clase*/
+	 .colorVerde{
+	     color:green;
+	 }
+	 /*selector de id*/
+	 #colorNegro{
+	     color:blueviolet;
+	 }
+	 /*especificidad
+	 inline>id>clase>tipo
+	 !important*/
+	 .main_btn_registrarse{
+		 text-decoration:none;
+		 padding:15px;
+	 }
+  

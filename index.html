@@ -18,14 +18,30 @@
    <link rel="mask-icon" href="./favicon_package_v0.16./safari-pinned-tab.svg" color="#5bbad5">
    <meta name="msapplication-TileColor" content="#da532c">
    <meta name="theme-color" content="#ffffff">
+
+  <!--incluir css en nuestro html-->
+  <!--1:inline-->
+  <!--2:interna-->
+  <style> 
+   /*puedo escribir codigo css*/
+    .colorVerde{
+	    color:green;
+		font-size:50px;
+		}
+  </style>
+  <!--3:externa-->
+  <link rel="stylesheet" href="./styles/styles.css">
 </head>
 
-<!--ve el usuario-->
+  <!--ve el usuario-->
 <body>
    <!--etiquetas semanticas-->
    <!--cabecera del doc-->
    <header>
-       <h1>Mascotas</h1>
+       <h1 style="color:blue"
+	       class="colorRojo colorVerde"
+		   
+		   >Mascotas</h1>
 	   <h2>Sitio dedicado a mascotas</h2>
    </header>
    
@@ -65,10 +81,7 @@
 	       <!--etiqueta de imagen-->
            <img src="https://images.justwatch.com/poster/284443041/s718/thundercats.jpg "
 		   width="15%">
-		   
 	   </section>
-	   
-	   
    </main>
 </body>
 
