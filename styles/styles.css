@@ -1,20 +1,285 @@
- /*selector de tipo*/
-   h1 {
-      color:red !important;
-	 }
-	 /*selector de clase*/
-	 .colorVerde{
-	     color:green;
-	 }
-	 /*selector de id*/
-	 #colorNegro{
-	     color:blueviolet;
-	 }
-	 /*especificidad
+/*defino la variable */
+@import url(./sitio-b.css);
+
+/*selector uiversal*/
+* {
+	font-family: "Ubuntu", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	margin: 0;
+}
+
+.ubuntu-light {
+	font-family: "Ubuntu", sans-serif;
+	font-weight: 300;
+	font-style: normal;
+}
+
+.ubuntu-regular {
+	font-family: "Ubuntu", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+
+.ubuntu-medium {
+	font-family: "Ubuntu", sans-serif;
+	font-weight: 500;
+	font-style: normal;
+}
+
+.ubuntu-bold {
+	font-family: "Ubuntu", sans-serif;
+	font-weight: 700;
+	font-style: normal;
+}
+
+.ubuntu-light-italic {
+	font-family: "Ubuntu", sans-serif;
+	font-weight: 300;
+	font-style: italic;
+}
+
+.ubuntu-regular-italic {
+	font-family: "Ubuntu", sans-serif;
+	font-weight: 400;
+	font-style: italic;
+}
+
+.ubuntu-medium-italic {
+	font-family: "Ubuntu", sans-serif;
+	font-weight: 500;
+	font-style: italic;
+}
+
+.ubuntu-bold-italic {
+	font-family: "Ubuntu", sans-serif;
+	font-weight: 700;
+	font-style: italic;
+}
+
+
+/*selector de tipo*/
+h1 {
+	color: var(--texto-blanco) !important;
+
+}
+
+/*especificidad
 	 inline>id>clase>tipo
-	 !important*/
-	 .main_btn_registrarse{
-		 text-decoration:none;
-		 padding:15px;
-	 }
-  
+	 !important
+*/
+.texto-blanco {
+	color: var(--texto-blanco);
+}
+
+.main {
+	height: 90vh;
+	/*vh altura relativa */
+	width: 0 auto;
+	/*vw ancho relativo */
+	background-image: linear-gradient(to right top, #0000008a, #0000008a), url(../imgs/banner-bg.jpg);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	min-height: 400px;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.main_titulo {
+	padding-top: 20vh;
+	padding-bottom: 5vh;
+	font-size: 3em;
+	/* espacio desde el borde hacia adentro */
+}
+
+.main_subtitulo {
+	margin-bottom: 5vh;
+}
+
+.main_btn_registrarse {
+	text-decoration: none;
+	padding: 15px;
+	/*espacio desde el borde hacia dentro */
+	background-color: var(--rojo);
+	color: var(--texto-blanco);
+	border-radius: 5px;
+	width: 20vh;
+
+}
+
+.header {
+	background-color: var(--rojo);
+	padding-top: 1vh;
+	padding-left: 3vw;
+	height: 9vh;
+	min-height: 50px;
+	/* agrego flexbox */
+	display: flex;
+	justify-content: center;
+	/* MAIN AXIS */
+	align-items: center;
+}
+
+.header_logo {
+	height: 5vh;
+	/* display: inline-block; */
+	width: 20vw;
+	display: flex;
+	align-items: center;
+}
+
+.header_logo_link {
+	text-decoration: none;
+	color: var(--texto-blanco);
+	display: flex;
+	align-items: center;
+}
+
+.header_menu {
+	height: 10vh;
+	/* display: inline-block; */
+	width: 78vw;
+	/* padding-top: 2vh; */
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	padding-right: 5vw;
+}
+
+.header_menu a {
+	padding-left: 1vw;
+	padding-right: 1vw;
+	text-decoration: none;
+	color: var(--texto-blanco);
+}
+
+#header_menu_login {
+	padding: 1vh;
+	background: black;
+	border-radius: 5px;
+	font-size: 1rem;
+}
+
+/*formulario de busqueda*/
+.busqueda {
+	/*margin:0 auto;despues los usamos para centrar otra cosa*/
+	text-align: center;
+	height: 50vh;
+	background-color: var(--fondo-negro);
+	color: var(--texto-blanco);
+	padding-top: 10vh;
+	font-size: 1.5rem;
+	display: flex;
+	flex-direction: column;
+}
+
+/*selectores avanzados*/
+/*1-hijos directos: >*/
+/* 2-hermano adyacente: + */
+/* 3-decendiente */
+.busqueda>h2+form {
+	padding-top: 6vh;
+}
+
+/* ?? */
+/*.busqueda form {
+	padding-top: 5vh;
+}
+
+#busqueda_form {
+	padding-top: 5vh;
+}
+
+form {
+	padding-top: 5vh;
+}*/
+/* 
+.busqueda form input {
+	padding: 1vh;
+} */
+.input_seach {
+	padding: 2vh 3vh;
+	text-transform: capitalize;
+	border-radius: 25px;
+	width: 50vw;
+	border: none;
+	color: var(--texto-blanco);
+	background-color: var(--fondo-negro);
+	border: 1.5px solid var(--texto-blanco);
+	/* tph:sacar borde cuando hago foco en el input */
+}
+
+.button_search {
+	padding: 1.6vh 3vh;
+	border-radius: 25px;
+	border: 2px solid var(--texto-blanco);
+	background-color: var(--rojo);
+	color: var(--texto-blanco);
+	font-weight: bold;
+	font-size: 1rem;
+}
+
+.button_search:hover {
+	font-size: 1.1rem;
+}
+
+hr {
+	margin: 0 auto;
+	margin-top: 20vh;
+	width: 75vw;
+	border: 0.5px solid var(--rojo);
+}
+
+.elemento_fijo {
+	position: fixed;
+	bottom: 5vh;
+	right: 5vw;
+	color: white;
+	opacity: 0.5;
+}
+
+.elemento_fijo:hover {
+	font-size: 1.1rem;
+}
+
+
+
+/* media query para impresion */
+@media print {
+
+	/* todo lo que ponga aca se ejecuta cuando voy a imprimir */
+	:root {
+		--rojo: #5ec9f3;
+	}
+
+	.main {
+		display: none;
+	}
+}
+
+/* media query */
+@media screen and (min-width:800px) and (max-width:900px) {
+
+	/* @media (min-width:800px) and (max-width:900px) */
+	/* @import url(styles-800-900.css); */
+	:root {
+		--rojo: #38c938;
+	}
+
+	.header {
+		justify-content: flex-start;
+	}
+
+	.header_menu {
+		display: none;
+	}
+}
+
+@media screen and (min-width:900px) and (max-width:1200px) {
+	:root {
+		--rojo: #f5b58a;
+	}
+}

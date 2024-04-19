@@ -1,0 +1,7 @@
+:root {
+	--rojo: #36649f;
+	--texto-blanco: #ffffff;
+	/* 2em => 2 * 16px =32px */
+	font-weight: bolder;
+
+}
